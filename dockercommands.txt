@@ -1,0 +1,8 @@
+# PostgreSQL
+docker run --name members_db -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=member_management_system -d postgres
+
+# Springboot
+docker run --name springboot --rm -it springboot-backend:latest
+
+# Angular
+docker run --name angulardemo --rm -it -p 4200:4200/tcp angular-website:latest

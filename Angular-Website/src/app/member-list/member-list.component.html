@@ -1,0 +1,27 @@
+<!-- Created with cmd: ng g c member-list -->
+<h2>Member List</h2>
+<!-- Define table attributes -->
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Surname</th>
+            <th>First Name</th>
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <!-- Define table space -->
+    <tbody>
+        <tr *ngFor = "let member of members">
+            <td> {{ member.id }} </td>
+            <td> {{ member.surname }} </td>
+            <td> {{ member.firstName }} </td>
+            <td>
+                <button (click)="memberDetails(member.id)" class="btn btn-primary">View</button>
+                <button (click)="updateMember(member.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="deleteMember(member.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
